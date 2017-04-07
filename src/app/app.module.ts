@@ -12,6 +12,7 @@ import { TvComponent } from './tv/tv.component';
 
 import { CharactersServices } from './services/movies.service'; 
 import { TvsServices } from './services/tv.service'; 
+import { PeoplesServices } from './services/people.service'; 
 
 
 import 'rxjs/add/operator/map';
@@ -33,7 +34,8 @@ import 'rxjs/add/operator/catch';
   ],
   providers: [
     CharactersServices,
-    TvsServices
+    TvsServices,
+    PeoplesServices
   ],
   bootstrap: [AppComponent]
 })

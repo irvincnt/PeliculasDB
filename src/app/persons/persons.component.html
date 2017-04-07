@@ -1,1 +1,17 @@
-<h1>Persons Component</h1>
+<h1 class="ui header">Personajes Populares</h1>
+<div class="ui five stackable cards">
+  <div class="card" *ngFor="let people of peoples">
+    <a class="image" href="#">
+            <img [src]="+img_link+people.profile_path">
+    </a>
+    <div class="content">
+        <div class="header">{{people.name}}</div>      
+    </div>
+    <div class="extra content">
+        <span class="right floated">
+            <i class="thumbs outline up icon"></i>
+            {{people.popularity}}
+		</span>
+    </div>
+  </div>
+</div>
