@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid margin-top">
+	<ul class="nav nav-tabs">
+		<li role="presentation" class="active"><a routerLink="/home">Home</a></li>
+		<li role="presentation"><a routerLink="/movies">Películas</a></li>		
+		<li role="presentation"><a routerLink="/tv">Series</a></li>
+		<li role="presentation"><a routerLink="/persons">Personajes</a></li>
+	</ul>
+
+	<router-outlet></router-outlet>
+</div>
