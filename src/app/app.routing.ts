@@ -2,6 +2,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
 import { PersonsComponent } from './persons/persons.component';
 import { TvComponent } from './tv/tv.component';
 
@@ -11,12 +12,18 @@ export const routes = [
         component: HomeComponent
     },
     {
-        path: 'movies',
+        path: 'movie',
         component: MoviesComponent
     },
     {
-        path: 'persons',
-        component: PersonsComponent
+        path: 'people',
+        component: PersonsComponent,
+        children: [
+            {
+                path: ':id',
+                component: MovieComponent
+            }
+        ]
     },
     {
         path: 'tv',
