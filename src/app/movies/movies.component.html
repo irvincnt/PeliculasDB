@@ -1,1 +1,13 @@
-<h1>Movie Component</h1>
+<!--Card-->
+<div class="ui five column grid">
+  <div class="column" *ngFor="let movie of movies">
+    <div class="ui fluid card">
+      <div class="image">
+        <img [src]="+img_link+movie.poster_path">
+      </div>
+      <div class="content">
+        <a class="header">{{movie.title}}</a>
+      </div>
+    </div>
+  </div>
+</div>

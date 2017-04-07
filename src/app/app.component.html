@@ -1,10 +1,12 @@
-<div class="container-fluid margin-top">
-	<ul class="nav nav-tabs">
-		<li role="presentation" routerLinkActive="active"><a routerLink="/home">Home</a></li>
-		<li role="presentation" routerLinkActive="active"><a routerLink="/movies">Películas</a></li>		
-		<li role="presentation" routerLinkActive="active"><a routerLink="/tv">Series</a></li>
-		<li role="presentation" routerLinkActive="active"><a routerLink="/persons">Personajes</a></li>
-	</ul>
+<div class="ui container margin-top">
+	<div class="ui inverted segment">
+		<div class="ui inverted secondary pointing menu">
+			<a class="item" routerLinkActive="active" routerLink="/home">Home</a>
+			<a class="item" routerLinkActive="active" routerLink="/movies">Películas</a>
+			<a class="item" routerLinkActive="active" routerLink="/tv">Series</a>
+			<a class="item" routerLinkActive="active" routerLink="/persons">Personajes</a>
+		</div>
+	</div>
 
 	<router-outlet></router-outlet>
 </div>

@@ -10,6 +10,10 @@ import { MoviesComponent } from './movies/movies.component';
 import { PersonsComponent } from './persons/persons.component';
 import { TvComponent } from './tv/tv.component';
 
+import { CharactersServices } from './services/movies.service'; 
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { TvComponent } from './tv/tv.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [
+    CharactersServices
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

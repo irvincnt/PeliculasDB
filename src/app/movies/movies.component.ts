@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { CharactersServices } from '../services/movies.service'; 
+
 
 @Component({
     selector: 'movies',
@@ -7,7 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MoviesComponent implements OnInit {
-    constructor() { }
+    movies;
+    img_link = 'https://image.tmdb.org/t/p/w342';
+    constructor(private service: CharactersServices) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.service.getCharacters()
+            .subscribe(
+                movies => this.movies = movies,
+                err => {
+                'Error en el servidor'
+            });
+     }
 }
