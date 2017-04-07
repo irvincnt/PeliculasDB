@@ -13,17 +13,17 @@ export const routes = [
     },
     {
         path: 'movie',
-        component: MoviesComponent
-    },
-    {
-        path: 'people',
-        component: PersonsComponent,
+        component: MoviesComponent,
         children: [
             {
                 path: ':id',
                 component: MovieComponent
             }
         ]
+    },
+    {
+        path: 'people',
+        component: PersonsComponent
     },
     {
         path: 'tv',

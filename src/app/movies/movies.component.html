@@ -1,7 +1,7 @@
 <h1 class="ui header">Peliculas Populares</h1>
 <div class="ui five stackable cards">
   <div class="card" *ngFor="let movie of movies">
-    <a class="image" href="#">
+    <a class="image" href="#" [routerLink]="['/movie', movie.id]">
             <img [src]="+img_link+movie.poster_path">
     </a>
     <div class="content">
@@ -22,4 +22,6 @@
         </span>
     </div>
   </div>
+<router-outlet></router-outlet>
+  
 </div>
