@@ -1,1 +1,25 @@
-<h1>Tv Component</h1>
+<h1 class="ui header">Series Populares</h1>
+<div class="ui five stackable cards">
+  <div class="card" *ngFor="let tv of tvs">
+    <a class="image" href="#">
+            <img [src]="+img_link+tv.poster_path">
+    </a>
+    <div class="content">
+        <div class="header">{{tv.name}}</div>
+        <div class="meta">
+        <a>{{tv.original_name}}</a>
+        </div>
+        
+    </div>
+    <div class="extra content">
+        <span class="right floated">
+				<i class="thumbs outline up icon"></i>
+				{{tv.vote_average}}
+				</span>
+        <span>
+        <i class="calendar icon"></i>
+        {{tv.first_air_date}}
+        </span>
+    </div>
+  </div>
+</div>

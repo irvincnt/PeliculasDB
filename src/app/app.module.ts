@@ -11,6 +11,8 @@ import { PersonsComponent } from './persons/persons.component';
 import { TvComponent } from './tv/tv.component';
 
 import { CharactersServices } from './services/movies.service'; 
+import { TvsServices } from './services/tv.service'; 
+
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -30,7 +32,8 @@ import 'rxjs/add/operator/catch';
     routing
   ],
   providers: [
-    CharactersServices
+    CharactersServices,
+    TvsServices
   ],
   bootstrap: [AppComponent]
 })

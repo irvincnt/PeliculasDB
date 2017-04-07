@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { TvsServices } from '../services/tv.service'; 
 
 @Component({
     selector: 'tv',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class TvComponent implements OnInit {
-    constructor() { }
+    tvs;
+    img_link = 'https://image.tmdb.org/t/p/w342';
+    constructor(private service: TvsServices) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.service.getTv()
+            .subscribe(
+                tvs => this.tvs = tvs,
+                err => {
+                'Error en el servidor'
+            });
+     }
 }
