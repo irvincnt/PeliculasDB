@@ -7,6 +7,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
+import { MovieComponent } from './movies/movie/movie.component';
 import { PersonsComponent } from './persons/persons.component';
 import { TvComponent } from './tv/tv.component';
 
@@ -23,6 +24,7 @@ import 'rxjs/add/operator/catch';
     AppComponent,
     HomeComponent,
     MoviesComponent,
+    MovieComponent,
     PersonsComponent,
     TvComponent
   ],
