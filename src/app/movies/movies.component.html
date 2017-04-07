@@ -1,28 +1,25 @@
-<!--Card-->
-<div class="ui five column grid">
-  <div class="column" *ngFor="let movie of movies">
-    <div class="ui fluid card">
-      
-	  <div class="image">
-			<img [src]="+img_link+movie.poster_path">
-		</div>
-		<div class="content">
-			<a class="header">{{movie.title}}</a>
-			<div class="meta">
-			</div>
-		</div>
-		<div class="content">
-			<span class="center floated">
-			<i class="thumbs outline up icon"></i>
-			{{movie.vote_average}}
-			</span>
-		</div>
-		<div class="extra content">
-			<a>
-			<i class="calendar icon"></i>
-			{{movie.release_date}}
-			</a>
-		</div>
+<h2 class="center">Películas Populares</h2>
+<div class="ui five stackable cards">
+  <div class="card" *ngFor="let movie of movies">
+    <a class="image" href="#">
+            <img [src]="+img_link+movie.poster_path">
+    </a>
+    <div class="content">
+        <div class="header">{{movie.title}}</div>
+        <div class="meta">
+        <a>{{movie.original_title}}</a>
+        </div>
+        
+    </div>
+    <div class="extra content">
+        <span class="right floated">
+				<i class="thumbs outline up icon"></i>
+				{{movie.vote_average}}
+				</span>
+        <span>
+        <i class="calendar icon"></i>
+        {{movie.release_date}}
+        </span>
     </div>
   </div>
 </div>
